@@ -5,16 +5,21 @@ import math
 def primeGenerator(m,k):
     
      
-     arr=[int(1) for x in range(0,k+1)]
-     arr[0]=0
-     arr[1]=0
-     listion=[]
-     
-     for z in range(2,int(len(arr)**0.5)+2):
+     arr=[x for x in range(k+1)]
+     arr[1]=False
+     listion=[2]
+     mid=int(len(arr)**0.5)+2
+
+     for z in range(3,mid,2):
              i=0
-             while(((z**2)+(i*z))<(k+1)):
-                            arr[((z**2)+(i*z))]=0
-                            i=i+1
+             while(z*i<k+1):
+                            arr[z*i]=False
+                            i=(2*i)+1
+                           
+     return arr
+
+print primeGenerator(0,100)
+'''
                             
 
      
@@ -37,7 +42,7 @@ if y<=10:
                     print z
                
 
-     
+  ''' 
      
      
 
