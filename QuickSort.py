@@ -6,11 +6,11 @@ def QuickSort(arr,start,end):
                     pIndex=start
                     for i in range(start,end):
                         if arr[i]<=pivot:
-                          k=arr[i]
+                          k=arr[i]          #SWAP can be used OR a,b=b,a
                           arr[i]=arr[pIndex]
                           arr[pIndex]=k
                           pIndex=pIndex+1
-                    y=arr[pIndex]
+                    y=arr[pIndex]         # #SWAP can be used OR a,b=b,a
                     arr[pIndex]=arr[end]
                     arr[end]=y
                     return pIndex
